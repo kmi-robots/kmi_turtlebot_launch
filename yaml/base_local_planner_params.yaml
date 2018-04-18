@@ -1,0 +1,44 @@
+# The following parameters are used by the local planner.
+TrajectoryPlannerROS:
+
+  # The following parameters set velocity bounds.
+  # Note: the planner cannot plan to move backwards, so min_vel_x has to be
+  # non-negative. It is better to set a value which is slightly above 0.
+  # A positive minimum bound does not imply that the robot never stays still.
+  max_vel_x: 0.5
+  min_vel_x: 0.4
+  max_vel_theta: 0.4
+  min_vel_theta: -0.4
+  min_in_place_vel_theta: 0.3
+  sim_time: 1.5
+
+  # The following parameters set acceleration bounds.
+  # Low acceleration bounds mean that the planner lowers differences between
+  # subsequent velocity commands, thus avoiding sudden moves.
+  acc_lim_theta: 0.3
+  acc_lim_x: 0.2
+
+  # The following parameter states that path distance and goal distance are
+  # expressed in meters instead of in cells.
+  meter_scoring: true
+
+  # States that the robot cannot move along the y axis (it cannot strafe).
+  holonomic_robot: false
+
+  # The following parameters set the tolerance in reaching the goal.
+  # latch_xy_goal_tolerance states that if the robot reaches the goal xy
+  # location it will simply rotate in place, even if it ends up outside the
+  # goal by doing so. This limits the cases in which the robot keeps rotating
+  # around the goal.
+  xy_goal_tolerance: 0.20
+  yaw_goal_tolerance: 0.30
+  latch_xy_goal_tolerance: true
+
+  # When the robot is too close to an obstacle it will "escape", meaning that
+  # it will move with linear velocity given by escape_vel (which obviously 
+  # must be negative).
+  escape_vel: -0.12
+
+  controller_frequency: 5.0
+
+  pdist_scale: 0.7

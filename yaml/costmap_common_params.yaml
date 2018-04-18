@@ -1,0 +1,25 @@
+# obstacle_range is the maximum distance at which obstacles are considered in the costmap.
+#obstacle_range: 5.0
+
+# range for clearing obstacles.
+#raytrace_range: 6.0
+
+# footprint is the size of the robot.
+footprint: [[0.64, 0.4], [0.64, -0.4], [-0.5, -0.4], [-0.5, 0.4]]
+
+inflation_radius: 0.01
+
+# sets the propagation range of costs. Increasing the factor decreases the range
+#cost_scaling_factor: 5.0
+
+observation_sources: laser_scan 
+
+laser_scan:
+  sensor_frame: base_link
+  data_type: LaserScan
+  topic: scan
+  marking: true
+  clearing: true
+  obstacle_range: 5.0
+  raytrace_range: 6.0
+
