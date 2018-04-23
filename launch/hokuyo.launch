@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="urg_node" type="urg_node" name="hokuyo_node" />
+    <node pkg="tf" type="static_transform_publisher" name="hokuyo_broadcaster" args="0.0 0.0 0.38 0 0 0 base_link laser 100" />
+</launch>
