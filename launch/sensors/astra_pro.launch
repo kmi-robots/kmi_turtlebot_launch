@@ -137,5 +137,7 @@
      file="$(find astra_launch)/launch/includes/astra_frames.launch">
     <arg name="camera" value="$(arg camera)" />
   </include>
+  
+  <node pkg="tf" type="static_transform_publisher" name="camera_broadcaster" args="0.12 0.0 0.35 0.0 -0.044 0.0 0.999 base_footprint camera_link 100" />
 
 </launch>
