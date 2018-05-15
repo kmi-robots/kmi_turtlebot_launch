@@ -120,6 +120,8 @@
         <!-- Image size and type -->
         <param name="width" value="640"/>
         <param name="height" value="480"/>
+        <param name="sharpness" value="44"/>
+        <param name="contrast" value="64"/>
         <!-- choose whichever uncompressed format the camera supports: -->
         <param name="pixel_format" value="yuyv"/> <!-- or yuyv/nv12/jpeg -->
         <param name="framerate" value="15"/>
