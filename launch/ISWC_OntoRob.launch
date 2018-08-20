@@ -1,5 +1,8 @@
 <launch>
     <include file="$(find kmi_turtlebot_launch)/launch/astra_hokuyo_navigation.launch"/>
     <node name="web_video_server" pkg="web_video_server" type="web_video_server" respawn="true" />
-    <node name="auto_docking_client" pkg="kmi_turtlebot_docking" type="DockDriveActionClient.py" />
+    <node name="auto_docking_client" pkg="kmi_turtlebot_docking" type="DockDriveActionClient.py">
+        <param name="home/x" type="double" value="-0.736" />
+        <param name="home/y" type="double" value="-1.2" />
+    </node>
 </launch>
