@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find kmi_turtlebot_launch)/launch/minimal.launch"/>
+    <include file="$(find kmi_turtlebot_launch)/launch/sensors/hokuyo.launch"/>
+    <include file="$(find kmi_turtlebot_launch)/launch/sensors/astra_turtlebot.launch"/>
+    <include file="$(find kmi_turtlebot_launch)/launch/navigation_library.launch"/>
+</launch>

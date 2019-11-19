@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find kmi_turtlebot_launch)/launch/move_base.launch.xml" />
+    <include file="$(find kmi_turtlebot_launch)/launch/amcl.launch" />
+    
+    <arg name="map_file" default="$(find kmi_turtlebot_launch)/map/map_library.yaml"/>
+    <node name="map_server" type="map_server" pkg="map_server"  args="$(arg map_file)" />
+</launch>
