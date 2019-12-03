@@ -118,8 +118,8 @@
         <param name="video_device " value="/dev/video1" />
         
         <!-- Image size and type -->
-        <param name="width" value="640"/>
-        <param name="height" value="480"/>
+        <param name="width" value="1280"/>
+        <param name="height" value="720"/>
 
         <!--<param name="sharpness" value="44"/>
         <param name="contrast" value="64"/>-->
